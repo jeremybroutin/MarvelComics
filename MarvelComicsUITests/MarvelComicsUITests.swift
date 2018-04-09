@@ -1,11 +1,3 @@
-//
-//  MarvelComicsUITests.swift
-//  MarvelComicsUITests
-//
-//  Created by Jeremy Broutin on 4/9/18.
-//  Copyright © 2018 Jeremy Broutin. All rights reserved.
-//
-
 import XCTest
 
 class MarvelComicsUITests: XCTestCase {
