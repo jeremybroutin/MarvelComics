@@ -18,6 +18,7 @@
 		E3FD02D5207BEE020032A7D6 /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3FD02D4207BEE020032A7D6 /* String+Extension.swift */; };
 		E3FD02D7207C21F80032A7D6 /* MarvelAuthentication.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3FD02D6207C21F80032A7D6 /* MarvelAuthentication.swift */; };
 		E3FD02D9207C24290032A7D6 /* MarvelAuthenticationTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3FD02D8207C24290032A7D6 /* MarvelAuthenticationTest.swift */; };
+		E3FD02DB207C32810032A7D6 /* AuthenticationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3FD02DA207C32810032A7D6 /* AuthenticationModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,6 +57,7 @@
 		E3FD02D4207BEE020032A7D6 /* String+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extension.swift"; sourceTree = "<group>"; };
 		E3FD02D6207C21F80032A7D6 /* MarvelAuthentication.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarvelAuthentication.swift; sourceTree = "<group>"; };
 		E3FD02D8207C24290032A7D6 /* MarvelAuthenticationTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarvelAuthenticationTest.swift; sourceTree = "<group>"; };
+		E3FD02DA207C32810032A7D6 /* AuthenticationModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -108,6 +110,7 @@
 			children = (
 				E3FD029E207BE7E50032A7D6 /* AppDelegate.swift */,
 				E3FD02A0207BE7E50032A7D6 /* ViewController.swift */,
+				E3FD02DA207C32810032A7D6 /* AuthenticationModel.swift */,
 				E3FD02D6207C21F80032A7D6 /* MarvelAuthentication.swift */,
 				E3FD02D4207BEE020032A7D6 /* String+Extension.swift */,
 				E3FD02A2207BE7E50032A7D6 /* Main.storyboard */,
@@ -274,6 +277,7 @@
 				E3FD02A1207BE7E50032A7D6 /* ViewController.swift in Sources */,
 				E3FD02A7207BE7E50032A7D6 /* MarvelComics.xcdatamodeld in Sources */,
 				E3FD02D7207C21F80032A7D6 /* MarvelAuthentication.swift in Sources */,
+				E3FD02DB207C32810032A7D6 /* AuthenticationModel.swift in Sources */,
 				E3FD029F207BE7E50032A7D6 /* AppDelegate.swift in Sources */,
 				E3FD02D5207BEE020032A7D6 /* String+Extension.swift in Sources */,
 			);
