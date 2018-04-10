@@ -25,6 +25,10 @@
 		E3FD02F3207D6B6E0032A7D6 /* FetchCharactersResponseBuilderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3FD02F2207D6B6E0032A7D6 /* FetchCharactersResponseBuilderTests.swift */; };
 		E3FD02F5207D6BA90032A7D6 /* FetchCharactersResponseBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3FD02F4207D6BA90032A7D6 /* FetchCharactersResponseBuilder.swift */; };
 		E3FD02F7207D6CFF0032A7D6 /* FetchCharactersResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3FD02F6207D6CFF0032A7D6 /* FetchCharactersResponseModel.swift */; };
+		E3FD02F9207D76BA0032A7D6 /* CharactersSliceResponseBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3FD02F8207D76BA0032A7D6 /* CharactersSliceResponseBuilder.swift */; };
+		E3FD02FB207D77330032A7D6 /* CharactersSliceResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3FD02FA207D77330032A7D6 /* CharactersSliceResponseModel.swift */; };
+		E3FD02FD207D77740032A7D6 /* CharacterResponseBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3FD02FC207D77740032A7D6 /* CharacterResponseBuilder.swift */; };
+		E3FD02FF207D77960032A7D6 /* CharacterResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3FD02FE207D77960032A7D6 /* CharacterResponseModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -79,6 +83,10 @@
 		E3FD02F2207D6B6E0032A7D6 /* FetchCharactersResponseBuilderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchCharactersResponseBuilderTests.swift; sourceTree = "<group>"; };
 		E3FD02F4207D6BA90032A7D6 /* FetchCharactersResponseBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchCharactersResponseBuilder.swift; sourceTree = "<group>"; };
 		E3FD02F6207D6CFF0032A7D6 /* FetchCharactersResponseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchCharactersResponseModel.swift; sourceTree = "<group>"; };
+		E3FD02F8207D76BA0032A7D6 /* CharactersSliceResponseBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharactersSliceResponseBuilder.swift; sourceTree = "<group>"; };
+		E3FD02FA207D77330032A7D6 /* CharactersSliceResponseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharactersSliceResponseModel.swift; sourceTree = "<group>"; };
+		E3FD02FC207D77740032A7D6 /* CharacterResponseBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterResponseBuilder.swift; sourceTree = "<group>"; };
+		E3FD02FE207D77960032A7D6 /* CharacterResponseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterResponseModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -153,6 +161,10 @@
 				E3FD02F0207C559E0032A7D6 /* FetchCharacterRequestModel.swift */,
 				E3FD02F4207D6BA90032A7D6 /* FetchCharactersResponseBuilder.swift */,
 				E3FD02F6207D6CFF0032A7D6 /* FetchCharactersResponseModel.swift */,
+				E3FD02F8207D76BA0032A7D6 /* CharactersSliceResponseBuilder.swift */,
+				E3FD02FA207D77330032A7D6 /* CharactersSliceResponseModel.swift */,
+				E3FD02FC207D77740032A7D6 /* CharacterResponseBuilder.swift */,
+				E3FD02FE207D77960032A7D6 /* CharacterResponseModel.swift */,
 			);
 			path = MarvelComics;
 			sourceTree = "<group>";
@@ -348,11 +360,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E3FD02FF207D77960032A7D6 /* CharacterResponseModel.swift in Sources */,
 				E3FD02F1207C559E0032A7D6 /* FetchCharacterRequestModel.swift in Sources */,
 				E3FD02DF207C4EDC0032A7D6 /* FetchCharactersMarvelService.swift in Sources */,
 				E3FD02A1207BE7E50032A7D6 /* ViewController.swift in Sources */,
 				E3FD02A7207BE7E50032A7D6 /* MarvelComics.xcdatamodeld in Sources */,
 				E3FD02D7207C21F80032A7D6 /* MarvelAuthentication.swift in Sources */,
+				E3FD02FB207D77330032A7D6 /* CharactersSliceResponseModel.swift in Sources */,
+				E3FD02F9207D76BA0032A7D6 /* CharactersSliceResponseBuilder.swift in Sources */,
+				E3FD02FD207D77740032A7D6 /* CharacterResponseBuilder.swift in Sources */,
 				E3FD02DB207C32810032A7D6 /* AuthenticationModel.swift in Sources */,
 				E3FD029F207BE7E50032A7D6 /* AppDelegate.swift in Sources */,
 				E3FD02F5207D6BA90032A7D6 /* FetchCharactersResponseBuilder.swift in Sources */,
