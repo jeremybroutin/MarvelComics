@@ -15,7 +15,13 @@ struct FetchCharactersMarvelService {
   }
 
   func fetchCharacters(requestModel: FetchCharactersRequestModel) {
-
+    guard let url = makeURL(requestModel: requestModel) else { return }
+    let dataTask = session.dataTask(with: url) { (data, response, error) in
+      print("error: \(String(describing:error))")
+      print("response: \(String(describing:response))")
+      print("data: \(String(describing:data))")
+    }
+    dataTask.resume()
   }
 
   private func makeURL(requestModel: FetchCharactersRequestModel) -> URL? {
