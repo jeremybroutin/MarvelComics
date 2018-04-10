@@ -17,8 +17,8 @@
 		E3FD02C2207BE7E60032A7D6 /* MarvelComicsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3FD02C1207BE7E60032A7D6 /* MarvelComicsUITests.swift */; };
 		E3FD02D5207BEE020032A7D6 /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3FD02D4207BEE020032A7D6 /* String+Extension.swift */; };
 		E3FD02D7207C21F80032A7D6 /* MarvelAuthentication.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3FD02D6207C21F80032A7D6 /* MarvelAuthentication.swift */; };
-		E3FD02D9207C24290032A7D6 /* MarvelAuthenticationTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3FD02D8207C24290032A7D6 /* MarvelAuthenticationTest.swift */; };
 		E3FD02DB207C32810032A7D6 /* AuthenticationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3FD02DA207C32810032A7D6 /* AuthenticationModel.swift */; };
+		E3FD02DD207C36300032A7D6 /* MarvelAuthenticationTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3FD02D8207C24290032A7D6 /* MarvelAuthenticationTest.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -126,8 +126,8 @@
 		E3FD02B5207BE7E60032A7D6 /* MarvelComicsTests */ = {
 			isa = PBXGroup;
 			children = (
-				E3FD02D8207C24290032A7D6 /* MarvelAuthenticationTest.swift */,
 				E3FD02B6207BE7E60032A7D6 /* MarvelComicsTests.swift */,
+				E3FD02D8207C24290032A7D6 /* MarvelAuthenticationTest.swift */,
 				E3FD02B8207BE7E60032A7D6 /* Info.plist */,
 			);
 			path = MarvelComicsTests;
@@ -287,7 +287,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E3FD02D9207C24290032A7D6 /* MarvelAuthenticationTest.swift in Sources */,
+				E3FD02DD207C36300032A7D6 /* MarvelAuthenticationTest.swift in Sources */,
 				E3FD02B7207BE7E60032A7D6 /* MarvelComicsTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
