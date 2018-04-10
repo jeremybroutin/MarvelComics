@@ -1,7 +1,7 @@
 import XCTest
 @testable import MarvelComics
 
-class MarvelAuthenticationTest: XCTestCase {
+class MarvelAuthenticationTests: XCTestCase {
 
   var sut: MarvelAuthentication!
 

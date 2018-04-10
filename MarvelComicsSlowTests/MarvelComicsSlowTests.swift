@@ -16,14 +16,15 @@ class MockURLSession: URLSessionProtocol {
   }
 
   func verifyDataTask(urlMatcher: ((URL?) -> Bool), file: StaticString = #file, line: UInt = #line) {
-    XCTAssertEqual(dataTaskCallCount, 1, "dataTask call count failure", file: file, line: line)
-    XCTAssertTrue(urlMatcher(dataTaskLastURL), "Actual url was \(String(describing: dataTaskLastURL))", file: file, line:line)
-
+    
     /*
      This helper function leverages a predicate (urlMatcher) to check for url validity.
      It also leverages the default implementation of literal expressions file and line,
      which evaluate at the point of call.
      */
+
+    XCTAssertEqual(dataTaskCallCount, 1, "dataTask call count failure", file: file, line: line)
+    XCTAssertTrue(urlMatcher(dataTaskLastURL), "Actual url was \(String(describing: dataTaskLastURL))", file: file, line:line)
   }
 }
 
@@ -73,7 +74,6 @@ class FetchCharactersMarvelServiceTest: XCTestCase {
 
   func testFetchCharacter_ShouldMakeDataTaskForMarvelEndpoint() {
     sut.fetchCharacters(requestModel: dummyRequestModel())
-
     mockURLSession.verifyDataTask(urlMatcher: { (url) -> Bool in
       url?.host == "gateway.marvel.com"
     })
