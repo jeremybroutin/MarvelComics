@@ -19,6 +19,9 @@
 		E3FD02D7207C21F80032A7D6 /* MarvelAuthentication.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3FD02D6207C21F80032A7D6 /* MarvelAuthentication.swift */; };
 		E3FD02DB207C32810032A7D6 /* AuthenticationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3FD02DA207C32810032A7D6 /* AuthenticationModel.swift */; };
 		E3FD02DD207C36300032A7D6 /* MarvelAuthenticationTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3FD02D8207C24290032A7D6 /* MarvelAuthenticationTest.swift */; };
+		E3FD02DF207C4EDC0032A7D6 /* FetchCharactersMarvelService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3FD02DE207C4EDC0032A7D6 /* FetchCharactersMarvelService.swift */; };
+		E3FD02E9207C4F910032A7D6 /* MarvelComicsSlowTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3FD02E8207C4F910032A7D6 /* MarvelComicsSlowTests.swift */; };
+		E3FD02F1207C559E0032A7D6 /* FetchCharacterRequestModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3FD02F0207C559E0032A7D6 /* FetchCharacterRequestModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -30,6 +33,13 @@
 			remoteInfo = MarvelComics;
 		};
 		E3FD02BE207BE7E60032A7D6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E3FD0293207BE7E50032A7D6 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E3FD029A207BE7E50032A7D6;
+			remoteInfo = MarvelComics;
+		};
+		E3FD02EB207C4F910032A7D6 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = E3FD0293207BE7E50032A7D6 /* Project object */;
 			proxyType = 1;
@@ -58,6 +68,11 @@
 		E3FD02D6207C21F80032A7D6 /* MarvelAuthentication.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarvelAuthentication.swift; sourceTree = "<group>"; };
 		E3FD02D8207C24290032A7D6 /* MarvelAuthenticationTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarvelAuthenticationTest.swift; sourceTree = "<group>"; };
 		E3FD02DA207C32810032A7D6 /* AuthenticationModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationModel.swift; sourceTree = "<group>"; };
+		E3FD02DE207C4EDC0032A7D6 /* FetchCharactersMarvelService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchCharactersMarvelService.swift; sourceTree = "<group>"; };
+		E3FD02E6207C4F910032A7D6 /* MarvelComicsSlowTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MarvelComicsSlowTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		E3FD02E8207C4F910032A7D6 /* MarvelComicsSlowTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarvelComicsSlowTests.swift; sourceTree = "<group>"; };
+		E3FD02EA207C4F910032A7D6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E3FD02F0207C559E0032A7D6 /* FetchCharacterRequestModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchCharacterRequestModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,6 +97,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		E3FD02E3207C4F910032A7D6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -91,6 +113,7 @@
 				E3FD029D207BE7E50032A7D6 /* MarvelComics */,
 				E3FD02B5207BE7E60032A7D6 /* MarvelComicsTests */,
 				E3FD02C0207BE7E60032A7D6 /* MarvelComicsUITests */,
+				E3FD02E7207C4F910032A7D6 /* MarvelComicsSlowTests */,
 				E3FD029C207BE7E50032A7D6 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -101,6 +124,7 @@
 				E3FD029B207BE7E50032A7D6 /* MarvelComics.app */,
 				E3FD02B2207BE7E60032A7D6 /* MarvelComicsTests.xctest */,
 				E3FD02BD207BE7E60032A7D6 /* MarvelComicsUITests.xctest */,
+				E3FD02E6207C4F910032A7D6 /* MarvelComicsSlowTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -119,6 +143,8 @@
 				E3FD02AD207BE7E60032A7D6 /* Info.plist */,
 				E3FD02A5207BE7E50032A7D6 /* MarvelComics.xcdatamodeld */,
 				E3FD02D1207BEA0A0032A7D6 /* MarvelComics-Bridging-Header.h */,
+				E3FD02DE207C4EDC0032A7D6 /* FetchCharactersMarvelService.swift */,
+				E3FD02F0207C559E0032A7D6 /* FetchCharacterRequestModel.swift */,
 			);
 			path = MarvelComics;
 			sourceTree = "<group>";
@@ -140,6 +166,15 @@
 				E3FD02C3207BE7E60032A7D6 /* Info.plist */,
 			);
 			path = MarvelComicsUITests;
+			sourceTree = "<group>";
+		};
+		E3FD02E7207C4F910032A7D6 /* MarvelComicsSlowTests */ = {
+			isa = PBXGroup;
+			children = (
+				E3FD02E8207C4F910032A7D6 /* MarvelComicsSlowTests.swift */,
+				E3FD02EA207C4F910032A7D6 /* Info.plist */,
+			);
+			path = MarvelComicsSlowTests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -198,6 +233,24 @@
 			productReference = E3FD02BD207BE7E60032A7D6 /* MarvelComicsUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
+		E3FD02E5207C4F910032A7D6 /* MarvelComicsSlowTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E3FD02ED207C4F910032A7D6 /* Build configuration list for PBXNativeTarget "MarvelComicsSlowTests" */;
+			buildPhases = (
+				E3FD02E2207C4F910032A7D6 /* Sources */,
+				E3FD02E3207C4F910032A7D6 /* Frameworks */,
+				E3FD02E4207C4F910032A7D6 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				E3FD02EC207C4F910032A7D6 /* PBXTargetDependency */,
+			);
+			name = MarvelComicsSlowTests;
+			productName = MarvelComicsSlowTests;
+			productReference = E3FD02E6207C4F910032A7D6 /* MarvelComicsSlowTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -220,6 +273,10 @@
 						CreatedOnToolsVersion = 9.3;
 						TestTargetID = E3FD029A207BE7E50032A7D6;
 					};
+					E3FD02E5207C4F910032A7D6 = {
+						CreatedOnToolsVersion = 9.3;
+						TestTargetID = E3FD029A207BE7E50032A7D6;
+					};
 				};
 			};
 			buildConfigurationList = E3FD0296207BE7E50032A7D6 /* Build configuration list for PBXProject "MarvelComics" */;
@@ -238,6 +295,7 @@
 				E3FD029A207BE7E50032A7D6 /* MarvelComics */,
 				E3FD02B1207BE7E60032A7D6 /* MarvelComicsTests */,
 				E3FD02BC207BE7E60032A7D6 /* MarvelComicsUITests */,
+				E3FD02E5207C4F910032A7D6 /* MarvelComicsSlowTests */,
 			);
 		};
 /* End PBXProject section */
@@ -267,6 +325,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		E3FD02E4207C4F910032A7D6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -274,6 +339,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E3FD02F1207C559E0032A7D6 /* FetchCharacterRequestModel.swift in Sources */,
+				E3FD02DF207C4EDC0032A7D6 /* FetchCharactersMarvelService.swift in Sources */,
 				E3FD02A1207BE7E50032A7D6 /* ViewController.swift in Sources */,
 				E3FD02A7207BE7E50032A7D6 /* MarvelComics.xcdatamodeld in Sources */,
 				E3FD02D7207C21F80032A7D6 /* MarvelAuthentication.swift in Sources */,
@@ -300,6 +367,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		E3FD02E2207C4F910032A7D6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E3FD02E9207C4F910032A7D6 /* MarvelComicsSlowTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -312,6 +387,11 @@
 			isa = PBXTargetDependency;
 			target = E3FD029A207BE7E50032A7D6 /* MarvelComics */;
 			targetProxy = E3FD02BE207BE7E60032A7D6 /* PBXContainerItemProxy */;
+		};
+		E3FD02EC207C4F910032A7D6 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E3FD029A207BE7E50032A7D6 /* MarvelComics */;
+			targetProxy = E3FD02EB207C4F910032A7D6 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -572,6 +652,46 @@
 			};
 			name = Release;
 		};
+		E3FD02EE207C4F910032A7D6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 4QSA42CC68;
+				INFOPLIST_FILE = MarvelComicsSlowTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.jeremybroutin.MarvelComicsSlowTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MarvelComics.app/MarvelComics";
+			};
+			name = Debug;
+		};
+		E3FD02EF207C4F910032A7D6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 4QSA42CC68;
+				INFOPLIST_FILE = MarvelComicsSlowTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.jeremybroutin.MarvelComicsSlowTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MarvelComics.app/MarvelComics";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -607,6 +727,15 @@
 			buildConfigurations = (
 				E3FD02CD207BE7E60032A7D6 /* Debug */,
 				E3FD02CE207BE7E60032A7D6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E3FD02ED207C4F910032A7D6 /* Build configuration list for PBXNativeTarget "MarvelComicsSlowTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E3FD02EE207C4F910032A7D6 /* Debug */,
+				E3FD02EF207C4F910032A7D6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

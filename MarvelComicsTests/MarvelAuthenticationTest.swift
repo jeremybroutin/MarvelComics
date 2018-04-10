@@ -3,17 +3,11 @@ import XCTest
 
 class MarvelAuthenticationTest: XCTestCase {
 
-  class MockAuthentication: AuthenticationModel {
-    let publicKey = "Public32Charactersxxxxxxxxxxxxxx"
-    let privateKey = "Private40Charactersxxxxxxxxxxxxxxxxxxxxx"
-    var md5 = { str in return "MD5" + str + "MD5" }
-  }
-
-  var sut: MockAuthentication!
+  var sut: MarvelAuthentication!
 
   override func setUp() {
     super.setUp()
-    sut = MockAuthentication()
+    sut = MarvelAuthentication()
   }
 
   override func tearDown() {
@@ -35,12 +29,9 @@ class MarvelAuthenticationTest: XCTestCase {
   }
 
   func testURLParameters_ShouldHaveTimeStampPublicKeyAndHashedConcatenation() {
+    sut.md5 = { str in return "MD5" + str + "MD5" }
     let params = sut.urlParameters(timeStamp: "TimeStamp")
-
-    XCTAssertEqual(params, "&ts=TimeStamp&apikey=Public32Charactersxxxxxxxxxxxxxx"
-      + "&hash=MD5TimeStamp"
-      + "Public32Charactersxxxxxxxxxxxxxx"
-      + "Private40CharactersxxxxxxxxxxxxxxxxxxxxxMD5")
+    XCTAssertEqual(params, "&ts=TimeStamp&apikey=Public&hash=MD5TimeStamp\(sut.publicKey)\(sut.privateKey)MD5")
   }
 
   func testURLParameters_ShouldChangeAcrossInvocations() {

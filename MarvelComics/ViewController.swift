@@ -5,6 +5,8 @@ class ViewController: UIViewController {
   override func viewDidLoad() {
     super.viewDidLoad()
 
+    /* Spike solution: to be replaced with TDD! */
+
     // Concatenate keys per https://developer.marvel.com/documentation/authorization
     let timeStamp = "1"
     let keys = timeStamp + MarvelKeys.privateKey.rawValue + MarvelKeys.publicKey.rawValue
