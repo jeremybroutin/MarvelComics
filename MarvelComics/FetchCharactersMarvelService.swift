@@ -15,7 +15,7 @@ struct FetchCharactersMarvelService {
   }
 
   func fetchCharacters(requestModel: FetchCharactersRequestModel) {
-    
+
   }
 
   private func makeURL(requestModel: FetchCharactersRequestModel) -> URL? {
