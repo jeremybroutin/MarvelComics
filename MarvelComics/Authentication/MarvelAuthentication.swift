@@ -8,8 +8,8 @@ enum MarvelKeys: String {
 
 struct MarvelAuthentication: AuthenticationModel {
 
-  var publicKey = MarvelKeys.publicKey.rawValue
-  var privateKey = MarvelKeys.privateKey.rawValue
+  let publicKey = MarvelKeys.publicKey.rawValue
+  let privateKey = MarvelKeys.privateKey.rawValue
 
   var md5: (String) -> String = { str in
     return str.MD5Digest()

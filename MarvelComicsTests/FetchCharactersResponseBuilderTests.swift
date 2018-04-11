@@ -3,44 +3,58 @@ import XCTest
 
 class FetchCharactersResponseBuilderTests: XCTestCase {
 
-  var sut: FetchCharactersResponseBuilder!
-
-  override func setUp() {
-    super.setUp()
-    sut = FetchCharactersResponseBuilder()
+  func testInit_WithNonDictionaryData_ShouldCaptureNilInBuilder() {
+    let dict: [String: Any] = ["data": 123]
+    let sut = FetchCharactersResponseBuilder(dictionary: dict)
+    XCTAssertNil(sut.data)
   }
 
-  override func tearDown() {
-    sut = nil
-    super.tearDown()
+  func testInit_WithData_ShouldCaptureValueInBuilder() {
+    let dict: [String: Any] = ["data": ["offset":123]]
+    let sut = FetchCharactersResponseBuilder(dictionary: dict)
+    XCTAssertEqual(sut.data?.offset, 123)
   }
 
-  func testParseJSONData_WithCode200() {
-    // Given or arrange or assemble
-    let json: String = "{\"code\":200}"
-    let jsonData = json.data(using: .utf8, allowLossyConversion: true)
+  func testBuild_WithDataWithRequiredFields_ShouldYieldSuccessWithSlice() {
+    let dict: [String: Any] = ["data": [
+      "offset": 123,
+      "total": 5,
+      ],
+    ]
+    let sut = FetchCharactersResponseBuilder(dictionary: dict)
+    let response = sut.build()
 
-    // When or act or activate
-    let response: FetchCharactersResponseModel? = sut.parseJSONData(jsonData)
+    switch response {
+    case .success(let slice):
+      XCTAssertEqual(slice.offset, 123)
+      XCTAssertEqual(slice.total, 5)
+    default:
+      XCTFail("Expected success, got \(response)")
+    }
 
-    // Then or assert
-    XCTAssertEqual(response?.code, 200)
+    /*
+     We are not evaluating the failure case here and instead call XCTFail if we get
+     anything else than success.
+     */
   }
 
-  func testParseJSONData_WithCode409() {
-    let json: String = "{\"code\":409}"
-    let jsonData = json.data(using: .utf8, allowLossyConversion: true)
+  func testBuild_WithoutData_ShouldYieldFailure() {
+    let dict: [String: Any] = [:]
+    let sut = FetchCharactersResponseBuilder(dictionary: dict)
+    let response = sut.build()
 
-    let response: FetchCharactersResponseModel? = sut.parseJSONData(jsonData)
+    switch response {
+    case .failure(let error):
+      XCTAssertEqual(error, "Invalid data")
+    default:
+      XCTFail("Expected failure, got \(response)")
+    }
 
-    XCTAssertEqual(response?.code, 409)
+    /*
+     Same as previous test for build success, we only evaluate the failure case
+     and call XCTFail for any other case.
+     */
   }
 
-  func testInit_WithOneResult_ShouldCaptureOneCharacterInBuilder() {
-    let dict: [String: Any] = ["results": [["name": "ONE"]]]
-    let sut = CharactersSliceResponseBuilder(dictionary: dict)
-    XCTAssertEqual(sut.results?.count, 1)
-    XCTAssertEqual(sut.results?[0].name, "ONE")
-  }
 
 }

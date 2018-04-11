@@ -29,6 +29,7 @@
 		E3FD02FB207D77330032A7D6 /* CharactersSliceResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3FD02FA207D77330032A7D6 /* CharactersSliceResponseModel.swift */; };
 		E3FD02FD207D77740032A7D6 /* CharacterResponseBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3FD02FC207D77740032A7D6 /* CharacterResponseBuilder.swift */; };
 		E3FD02FF207D77960032A7D6 /* CharacterResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3FD02FE207D77960032A7D6 /* CharacterResponseModel.swift */; };
+		E3FD0305207E7FF60032A7D6 /* CharactersSliceResponseBuilderTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3FD0304207E7FF60032A7D6 /* CharactersSliceResponseBuilderTest.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -87,6 +88,7 @@
 		E3FD02FA207D77330032A7D6 /* CharactersSliceResponseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharactersSliceResponseModel.swift; sourceTree = "<group>"; };
 		E3FD02FC207D77740032A7D6 /* CharacterResponseBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterResponseBuilder.swift; sourceTree = "<group>"; };
 		E3FD02FE207D77960032A7D6 /* CharacterResponseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterResponseModel.swift; sourceTree = "<group>"; };
+		E3FD0304207E7FF60032A7D6 /* CharactersSliceResponseBuilderTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharactersSliceResponseBuilderTest.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -146,11 +148,10 @@
 		E3FD029D207BE7E50032A7D6 /* MarvelComics */ = {
 			isa = PBXGroup;
 			children = (
+				E3FD0303207E7C0A0032A7D6 /* Authentication */,
 				E3FD0300207D7D5A0032A7D6 /* FetchCharacters */,
 				E3FD029E207BE7E50032A7D6 /* AppDelegate.swift */,
 				E3FD02A0207BE7E50032A7D6 /* ViewController.swift */,
-				E3FD02DA207C32810032A7D6 /* AuthenticationModel.swift */,
-				E3FD02D6207C21F80032A7D6 /* MarvelAuthentication.swift */,
 				E3FD02D4207BEE020032A7D6 /* String+Extension.swift */,
 				E3FD02A2207BE7E50032A7D6 /* Main.storyboard */,
 				E3FD02A8207BE7E60032A7D6 /* Assets.xcassets */,
@@ -165,6 +166,7 @@
 		E3FD02B5207BE7E60032A7D6 /* MarvelComicsTests */ = {
 			isa = PBXGroup;
 			children = (
+				E3FD0304207E7FF60032A7D6 /* CharactersSliceResponseBuilderTest.swift */,
 				E3FD02F2207D6B6E0032A7D6 /* FetchCharactersResponseBuilderTests.swift */,
 				E3FD02B6207BE7E60032A7D6 /* MarvelComicsTests.swift */,
 				E3FD02D8207C24290032A7D6 /* MarvelAuthenticationTests.swift */,
@@ -220,6 +222,15 @@
 				E3FD02FE207D77960032A7D6 /* CharacterResponseModel.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		E3FD0303207E7C0A0032A7D6 /* Authentication */ = {
+			isa = PBXGroup;
+			children = (
+				E3FD02DA207C32810032A7D6 /* AuthenticationModel.swift */,
+				E3FD02D6207C21F80032A7D6 /* MarvelAuthentication.swift */,
+			);
+			path = Authentication;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -406,6 +417,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E3FD02DD207C36300032A7D6 /* MarvelAuthenticationTests.swift in Sources */,
+				E3FD0305207E7FF60032A7D6 /* CharactersSliceResponseBuilderTest.swift in Sources */,
 				E3FD02B7207BE7E60032A7D6 /* MarvelComicsTests.swift in Sources */,
 				E3FD02F3207D6B6E0032A7D6 /* FetchCharactersResponseBuilderTests.swift in Sources */,
 			);

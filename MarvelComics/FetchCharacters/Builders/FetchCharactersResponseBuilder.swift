@@ -2,25 +2,21 @@ import Foundation
 
 struct FetchCharactersResponseBuilder {
 
-  var code: Int?
-  var status: String?
+  let data: CharactersSliceResponseBuilder?
 
-  func parseJSONData(_ data: Data?) -> FetchCharactersResponseModel? {
-    guard let data = data else { return nil }
-
-    do {
-      let dict = try JSONSerialization.jsonObject(with: data, options: .allowFragments) as! [String: Any]
-      let code = dict["code"] as! Int
-      return FetchCharactersResponseModel(code: code, status: "ok")
-    } catch let error {
-      print("json serialization error: \(error)")
-      return nil
-    }
+  init(dictionary: [String: Any]) {
+    let dataDict = dictionary["data"] as? [String: Any]
+    data = dataDict.map { CharactersSliceResponseBuilder(dictionary: $0) }
   }
 
-  func build() -> FetchCharactersResponseModel? {
-    guard let code = code, let status = status else { return nil }
-    return FetchCharactersResponseModel(code: code, status: status)
+  func build() -> FetchCharactersResponseModel {
+    return data?.build()
+                .flatMap { .success($0) } ?? .failure("Invalid data")
   }
+
+  /*
+   This implementation replaces the previous parseJSONData method buy delegating
+   the parsing to builders and models structures, following the Construction Builder pattern.
+   */
 
 }

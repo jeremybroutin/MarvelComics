@@ -31,7 +31,7 @@ class MarvelAuthenticationTests: XCTestCase {
   func testURLParameters_ShouldHaveTimeStampPublicKeyAndHashedConcatenation() {
     sut.md5 = { str in return "MD5" + str + "MD5" }
     let params = sut.urlParameters(timeStamp: "TimeStamp")
-    XCTAssertEqual(params, "&ts=TimeStamp&apikey=Public&hash=MD5TimeStamp\(sut.publicKey)\(sut.privateKey)MD5")
+    XCTAssertEqual(params, "&ts=TimeStamp&apikey=\(sut.publicKey)&hash=MD5TimeStamp\(sut.publicKey)\(sut.privateKey)MD5")
   }
 
   func testURLParameters_ShouldChangeAcrossInvocations() {
