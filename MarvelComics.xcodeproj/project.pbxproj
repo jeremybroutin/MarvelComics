@@ -146,6 +146,7 @@
 		E3FD029D207BE7E50032A7D6 /* MarvelComics */ = {
 			isa = PBXGroup;
 			children = (
+				E3FD0300207D7D5A0032A7D6 /* FetchCharacters */,
 				E3FD029E207BE7E50032A7D6 /* AppDelegate.swift */,
 				E3FD02A0207BE7E50032A7D6 /* ViewController.swift */,
 				E3FD02DA207C32810032A7D6 /* AuthenticationModel.swift */,
@@ -157,14 +158,6 @@
 				E3FD02AD207BE7E60032A7D6 /* Info.plist */,
 				E3FD02A5207BE7E50032A7D6 /* MarvelComics.xcdatamodeld */,
 				E3FD02D1207BEA0A0032A7D6 /* MarvelComics-Bridging-Header.h */,
-				E3FD02DE207C4EDC0032A7D6 /* FetchCharactersMarvelService.swift */,
-				E3FD02F0207C559E0032A7D6 /* FetchCharacterRequestModel.swift */,
-				E3FD02F4207D6BA90032A7D6 /* FetchCharactersResponseBuilder.swift */,
-				E3FD02F6207D6CFF0032A7D6 /* FetchCharactersResponseModel.swift */,
-				E3FD02F8207D76BA0032A7D6 /* CharactersSliceResponseBuilder.swift */,
-				E3FD02FA207D77330032A7D6 /* CharactersSliceResponseModel.swift */,
-				E3FD02FC207D77740032A7D6 /* CharacterResponseBuilder.swift */,
-				E3FD02FE207D77960032A7D6 /* CharacterResponseModel.swift */,
 			);
 			path = MarvelComics;
 			sourceTree = "<group>";
@@ -196,6 +189,37 @@
 				E3FD02EA207C4F910032A7D6 /* Info.plist */,
 			);
 			path = MarvelComicsSlowTests;
+			sourceTree = "<group>";
+		};
+		E3FD0300207D7D5A0032A7D6 /* FetchCharacters */ = {
+			isa = PBXGroup;
+			children = (
+				E3FD02DE207C4EDC0032A7D6 /* FetchCharactersMarvelService.swift */,
+				E3FD02F0207C559E0032A7D6 /* FetchCharacterRequestModel.swift */,
+				E3FD0301207D7D690032A7D6 /* Builders */,
+				E3FD0302207D7D740032A7D6 /* Models */,
+			);
+			path = FetchCharacters;
+			sourceTree = "<group>";
+		};
+		E3FD0301207D7D690032A7D6 /* Builders */ = {
+			isa = PBXGroup;
+			children = (
+				E3FD02F4207D6BA90032A7D6 /* FetchCharactersResponseBuilder.swift */,
+				E3FD02F8207D76BA0032A7D6 /* CharactersSliceResponseBuilder.swift */,
+				E3FD02FC207D77740032A7D6 /* CharacterResponseBuilder.swift */,
+			);
+			path = Builders;
+			sourceTree = "<group>";
+		};
+		E3FD0302207D7D740032A7D6 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				E3FD02F6207D6CFF0032A7D6 /* FetchCharactersResponseModel.swift */,
+				E3FD02FA207D77330032A7D6 /* CharactersSliceResponseModel.swift */,
+				E3FD02FE207D77960032A7D6 /* CharacterResponseModel.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
