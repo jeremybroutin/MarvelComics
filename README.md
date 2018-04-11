@@ -1,11 +1,13 @@
 # MarvelComics
+MarvelComics allows one to fetch information about a specific Marvel super hero, leveraging the Marvel Public API.
+
 The MarvelComics app is my first **TDD project** built by following along the different blog posts of Jon Reid, from Quality Coding.
 Jon Reid explains how does TDD works and influences code design, by going himself through the creation of this MarvelComis app.
 This repository is a simple training exercice from myself to replicate the app while applying TDD as per Jon's guidance.
 
 **Source**: :sparkles: [TDD Sample App: The Complete Collection ...So Far][1] :sparkles:
 
-##Experience
+## Experience
 The objectives of this project are:
 - to get familiar with Test Driven Development
 - see how to apply TDD in a real project by "shadowing" an expert
