@@ -40,7 +40,7 @@ class ViewController: UIViewController {
         }
       }
     }
-    dataTask.resume()
+//    dataTask.resume()
   }
 }
 
