@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E33DDE912081631900555278 /* NetworkRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = E33DDE902081631900555278 /* NetworkRequest.swift */; };
+		E33DDE932081634600555278 /* NetworkRequestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E33DDE922081634600555278 /* NetworkRequestTests.swift */; };
 		E3FD029F207BE7E50032A7D6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3FD029E207BE7E50032A7D6 /* AppDelegate.swift */; };
 		E3FD02A1207BE7E50032A7D6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3FD02A0207BE7E50032A7D6 /* ViewController.swift */; };
 		E3FD02A4207BE7E50032A7D6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E3FD02A2207BE7E50032A7D6 /* Main.storyboard */; };
@@ -56,6 +58,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		E33DDE902081631900555278 /* NetworkRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkRequest.swift; sourceTree = "<group>"; };
+		E33DDE922081634600555278 /* NetworkRequestTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkRequestTests.swift; sourceTree = "<group>"; };
 		E3FD029B207BE7E50032A7D6 /* MarvelComics.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MarvelComics.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E3FD029E207BE7E50032A7D6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E3FD02A0207BE7E50032A7D6 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -157,6 +161,7 @@
 				E3FD02AD207BE7E60032A7D6 /* Info.plist */,
 				E3FD02A5207BE7E50032A7D6 /* MarvelComics.xcdatamodeld */,
 				E3FD02D1207BEA0A0032A7D6 /* MarvelComics-Bridging-Header.h */,
+				E33DDE902081631900555278 /* NetworkRequest.swift */,
 			);
 			path = MarvelComics;
 			sourceTree = "<group>";
@@ -164,6 +169,7 @@
 		E3FD02B5207BE7E60032A7D6 /* MarvelComicsTests */ = {
 			isa = PBXGroup;
 			children = (
+				E33DDE922081634600555278 /* NetworkRequestTests.swift */,
 				E3FD0304207E7FF60032A7D6 /* CharactersSliceResponseBuilderTest.swift */,
 				E3FD02F2207D6B6E0032A7D6 /* FetchCharactersResponseBuilderTests.swift */,
 				E3FD02D8207C24290032A7D6 /* MarvelAuthenticationTests.swift */,
@@ -396,6 +402,7 @@
 				E3FD02F1207C559E0032A7D6 /* FetchCharacterRequestModel.swift in Sources */,
 				E3FD02DF207C4EDC0032A7D6 /* FetchCharactersMarvelService.swift in Sources */,
 				E3FD02A1207BE7E50032A7D6 /* ViewController.swift in Sources */,
+				E33DDE912081631900555278 /* NetworkRequest.swift in Sources */,
 				E3FD02A7207BE7E50032A7D6 /* MarvelComics.xcdatamodeld in Sources */,
 				E3FD02D7207C21F80032A7D6 /* MarvelAuthentication.swift in Sources */,
 				E3FD02FB207D77330032A7D6 /* CharactersSliceResponseModel.swift in Sources */,
@@ -415,6 +422,7 @@
 			files = (
 				E3FD02DD207C36300032A7D6 /* MarvelAuthenticationTests.swift in Sources */,
 				E3FD0305207E7FF60032A7D6 /* CharactersSliceResponseBuilderTest.swift in Sources */,
+				E33DDE932081634600555278 /* NetworkRequestTests.swift in Sources */,
 				E3FD02F3207D6B6E0032A7D6 /* FetchCharactersResponseBuilderTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

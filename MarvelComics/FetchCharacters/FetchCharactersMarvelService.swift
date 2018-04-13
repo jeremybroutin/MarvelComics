@@ -15,6 +15,10 @@ struct FetchCharactersMarvelService {
   }
 
   func fetchCharacters(requestModel: FetchCharactersRequestModel) {
+    fetchCharacters(requestModel: requestModel, networkRequest: NetworkRequest())
+  }
+
+  func fetchCharacters(requestModel: FetchCharactersRequestModel, networkRequest: NetworkRequest) {
     guard let url = makeURL(requestModel: requestModel) else { return }
     let dataTask = session.dataTask(with: url) { (data, response, error) in
       print("error: \(String(describing:error))")
