@@ -58,7 +58,10 @@ class FetchCharactersMarvelServiceTest: XCTestCase {
     mockDataTask = PartialMockURLSessionDataTask()
     mockURLSession = MockURLSession()
     mockURLSession.dataTaskReturnValue = mockDataTask
-    sut = FetchCharactersMarvelService(session: mockURLSession)
+    sut = FetchCharactersMarvelService(session: mockURLSession, authParametersGenerator: { () -> String in
+      return MarvelAuthentication().urlParameters()
+    }
+    )
   }
 
   override func tearDown() {
@@ -73,7 +76,7 @@ class FetchCharactersMarvelServiceTest: XCTestCase {
   }
 
   func testFetchCharacter_ShouldMakeDataTaskForMarvelEndpoint() {
-    sut.fetchCharacters(requestModel: dummyRequestModel())
+    sut.fetchCharacters(requestModel: dummyRequestModel(), networkRequest: NetworkRequest())
     mockURLSession.verifyDataTask(urlMatcher: { (url) -> Bool in
       url?.host == "gateway.marvel.com"
     })
@@ -81,7 +84,7 @@ class FetchCharactersMarvelServiceTest: XCTestCase {
   }
 
   func testFetchCharacter_ShouldStartDataTask() {
-    sut.fetchCharacters(requestModel: dummyRequestModel())
+    sut.fetchCharacters(requestModel: dummyRequestModel(), networkRequest: NetworkRequest())
     mockDataTask.verifyResume()
   }
 }

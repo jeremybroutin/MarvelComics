@@ -16,10 +16,6 @@ struct FetchCharactersMarvelService {
     self.authParametersGenerator = authParametersGenerator
   }
 
-  func fetchCharacters(requestModel: FetchCharactersRequestModel) {
-    fetchCharacters(requestModel: requestModel, networkRequest: NetworkRequest())
-  }
-
   func fetchCharacters(requestModel: FetchCharactersRequestModel, networkRequest: NetworkRequest) {
     guard let url = makeURL(requestModel: requestModel) else { return }
     let dataTask = session.dataTask(with: url) { (data, response, error) in
@@ -27,7 +23,7 @@ struct FetchCharactersMarvelService {
       print("response: \(String(describing:response))")
       print("data: \(String(describing:data))")
     }
-    dataTask.resume()
+    networkRequest.start(dataTask)
   }
 
   private func makeURL(requestModel: FetchCharactersRequestModel) -> URL? {
