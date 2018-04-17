@@ -127,6 +127,60 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		E33DDE9620858DB300555278 /* Request */ = {
+			isa = PBXGroup;
+			children = (
+				E3FD02F0207C559E0032A7D6 /* FetchCharacterRequestModel.swift */,
+			);
+			path = Request;
+			sourceTree = "<group>";
+		};
+		E33DDE9720858DBA00555278 /* Response */ = {
+			isa = PBXGroup;
+			children = (
+				E3FD02FE207D77960032A7D6 /* CharacterResponseModel.swift */,
+				E3FD02FA207D77330032A7D6 /* CharactersSliceResponseModel.swift */,
+				E3FD02F6207D6CFF0032A7D6 /* FetchCharactersResponseModel.swift */,
+			);
+			path = Response;
+			sourceTree = "<group>";
+		};
+		E33DDE9820858E0900555278 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				E33DDE902081631900555278 /* NetworkRequest.swift */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		E33DDE9920858E1300555278 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				E3FD02D4207BEE020032A7D6 /* String+Extension.swift */,
+				E33DDE942085893300555278 /* Precondition.swift */,
+				E3FD02D1207BEA0A0032A7D6 /* MarvelComics-Bridging-Header.h */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		E33DDE9A20858E3400555278 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				E3FD029E207BE7E50032A7D6 /* AppDelegate.swift */,
+				E3FD02A0207BE7E50032A7D6 /* ViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		E33DDE9B20858E4200555278 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				E3FD02AA207BE7E60032A7D6 /* LaunchScreen.storyboard */,
+				E3FD02A2207BE7E50032A7D6 /* Main.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
 		E3FD0292207BE7E50032A7D6 = {
 			isa = PBXGroup;
 			children = (
@@ -152,19 +206,15 @@
 		E3FD029D207BE7E50032A7D6 /* MarvelComics */ = {
 			isa = PBXGroup;
 			children = (
+				E33DDE9B20858E4200555278 /* Storyboards */,
+				E33DDE9A20858E3400555278 /* Controllers */,
+				E33DDE9920858E1300555278 /* Utilities */,
+				E33DDE9820858E0900555278 /* Networking */,
 				E3FD0303207E7C0A0032A7D6 /* Authentication */,
 				E3FD0300207D7D5A0032A7D6 /* FetchCharacters */,
-				E3FD029E207BE7E50032A7D6 /* AppDelegate.swift */,
-				E3FD02A0207BE7E50032A7D6 /* ViewController.swift */,
-				E3FD02D4207BEE020032A7D6 /* String+Extension.swift */,
-				E3FD02A2207BE7E50032A7D6 /* Main.storyboard */,
 				E3FD02A8207BE7E60032A7D6 /* Assets.xcassets */,
-				E3FD02AA207BE7E60032A7D6 /* LaunchScreen.storyboard */,
 				E3FD02AD207BE7E60032A7D6 /* Info.plist */,
 				E3FD02A5207BE7E50032A7D6 /* MarvelComics.xcdatamodeld */,
-				E3FD02D1207BEA0A0032A7D6 /* MarvelComics-Bridging-Header.h */,
-				E33DDE902081631900555278 /* NetworkRequest.swift */,
-				E33DDE942085893300555278 /* Precondition.swift */,
 			);
 			path = MarvelComics;
 			sourceTree = "<group>";
@@ -203,7 +253,6 @@
 			isa = PBXGroup;
 			children = (
 				E3FD02DE207C4EDC0032A7D6 /* FetchCharactersMarvelService.swift */,
-				E3FD02F0207C559E0032A7D6 /* FetchCharacterRequestModel.swift */,
 				E3FD0301207D7D690032A7D6 /* Builders */,
 				E3FD0302207D7D740032A7D6 /* Models */,
 			);
@@ -223,9 +272,8 @@
 		E3FD0302207D7D740032A7D6 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				E3FD02F6207D6CFF0032A7D6 /* FetchCharactersResponseModel.swift */,
-				E3FD02FA207D77330032A7D6 /* CharactersSliceResponseModel.swift */,
-				E3FD02FE207D77960032A7D6 /* CharacterResponseModel.swift */,
+				E33DDE9620858DB300555278 /* Request */,
+				E33DDE9720858DBA00555278 /* Response */,
 			);
 			path = Models;
 			sourceTree = "<group>";
