@@ -14,4 +14,13 @@ struct MarvelAuthentication: AuthenticationModel {
   var md5: (String) -> String = { str in
     return str.MD5Digest()
   }
+
+  func urlParameters(timestamp: String = MarvelAuthentication.timestamp()) -> String {
+    let hash = md5(timestamp + privateKey + publicKey)
+    return "&ts=\(timestamp)&apiKey=\(publicKey)&hash=\(hash)"
+  }
+
+  private static func timestamp() -> String {
+    return String(Date().timeIntervalSinceReferenceDate)
+  }
 }

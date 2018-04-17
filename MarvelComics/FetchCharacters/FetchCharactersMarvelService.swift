@@ -9,9 +9,11 @@ extension URLSession: URLSessionProtocol {}
 struct FetchCharactersMarvelService {
 
   private let session: URLSessionProtocol
+  private let authParametersGenerator: () -> String
 
-  init(session: URLSessionProtocol) {
+  init(session: URLSessionProtocol, authParametersGenerator: @escaping () -> String) {
     self.session = session
+    self.authParametersGenerator = authParametersGenerator
   }
 
   func fetchCharacters(requestModel: FetchCharactersRequestModel) {
