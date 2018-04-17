@@ -17,7 +17,7 @@ struct MarvelAuthentication: AuthenticationModel {
 
   func urlParameters(timestamp: String = MarvelAuthentication.timestamp()) -> String {
     let hash = md5(timestamp + privateKey + publicKey)
-    return "&ts=\(timestamp)&apiKey=\(publicKey)&hash=\(hash)"
+    return "&ts=\(timestamp)&apikey=\(publicKey)&hash=\(hash)"
   }
 
   private static func timestamp() -> String {

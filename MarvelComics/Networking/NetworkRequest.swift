@@ -5,6 +5,11 @@ protocol URLSessionTaskProtocol: class {
   func cancel()
 
   /*
+   Uses the "interface segmentation principle" by taking just a slice of of URLSessionTask.
+   Here we only stub resume() and cancel().
+   */
+
+  /*
    Enforce protocol conformance for classes only to allow the use of the "==="
    operator between two instances.
    */
