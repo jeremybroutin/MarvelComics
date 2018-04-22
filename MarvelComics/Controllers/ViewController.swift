@@ -8,7 +8,7 @@ class ViewController: UIViewController {
     let service = FetchCharactersMarvelService(session: URLSession.shared) { () -> String in
       return MarvelAuthentication().urlParameters()
     }
-    let requestModel = FetchCharactersRequestModel(namePrefix: "Spider", pageSize: 1, offset: 0)
+    let requestModel = FetchCharactersRequestModel(namePrefix: "Spider", pageSize: 10, offset: 0)
     service.fetchCharacters(requestModel: requestModel, networkRequest: NetworkRequest())
   }
 }
