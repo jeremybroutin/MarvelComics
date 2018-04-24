@@ -9,13 +9,16 @@ class MockURLSession: URLSessionProtocol {
   // Mock the dataTask to override the resume() function.
   var dataTaskReturnValue: URLSessionDataTask!
 
-  func dataTask(with url: URL, completionHandler: @escaping (Data?, URLResponse?, Error?) -> Swift.Void) -> URLSessionDataTask {
+  func dataTask(with url: URL,
+                completionHandler: @escaping (Data?, URLResponse?, Error?) -> Swift.Void)
+    -> URLSessionDataTask {
     dataTaskCallCount += 1
     dataTaskLastURL = url
     return dataTaskReturnValue
   }
 
-  func verifyDataTask(urlMatcher: ((URL?) -> Bool), file: StaticString = #file, line: UInt = #line) {
+  func verifyDataTask(urlMatcher: ((URL?) -> Bool),
+                      file: StaticString = #file, line: UInt = #line) {
     
     /*
      This helper function leverages a predicate (urlMatcher) to check for url validity.
@@ -24,7 +27,8 @@ class MockURLSession: URLSessionProtocol {
      */
 
     XCTAssertEqual(dataTaskCallCount, 1, "dataTask call count failure", file: file, line: line)
-    XCTAssertTrue(urlMatcher(dataTaskLastURL), "Actual url was \(String(describing: dataTaskLastURL))", file: file, line:line)
+    XCTAssertTrue(urlMatcher(dataTaskLastURL),
+                  "Actual url was \(String(describing: dataTaskLastURL))", file: file, line:line)
   }
 }
 
@@ -58,7 +62,8 @@ class FetchCharactersMarvelServiceTest: XCTestCase {
     mockDataTask = PartialMockURLSessionDataTask()
     mockURLSession = MockURLSession()
     mockURLSession.dataTaskReturnValue = mockDataTask
-    sut = FetchCharactersMarvelService(session: mockURLSession, authParametersGenerator: { return "" })
+    sut =
+      FetchCharactersMarvelService(session: mockURLSession, authParametersGenerator: { return "" })
   }
 
   override func tearDown() {
@@ -92,35 +97,75 @@ class FetchCharactersMarvelServiceTest: XCTestCase {
   func testFetchCharacters_WithNamePrefix_ShouldMakeTaskWithQueryForNameStartsWith() {
     let requestModel = FetchCharactersRequestModel(namePrefix: "NAME", limit: 10, offset: 30)
     sut.fetchCharacters(requestModel: requestModel, networkRequest: NetworkRequest())
-    mockURLSession.verifyDataTask(urlMatcher: { url in url?.hasQuery(name: "nameStartsWith", value: "NAME") ?? false })
+    mockURLSession.verifyDataTask(urlMatcher: { url in
+      url?.hasQuery(name: "nameStartsWith", value: "NAME") ?? false
+    })
   }
 
   func testFetchCharacters_WithNamePrefix_ShouldHandleSpacesInNameStartsWith() {
     let requestModel = FetchCharactersRequestModel(namePrefix: "NA ME", limit: 10, offset: 30)
     sut.fetchCharacters(requestModel: requestModel, networkRequest: NetworkRequest())
-    mockURLSession.verifyDataTask(urlMatcher: { url in url?.hasQuery(name: "nameStartsWith", value: "NA ME") ?? false })
+    mockURLSession.verifyDataTask(urlMatcher: { url in
+      url?.hasQuery(name: "nameStartsWith", value: "NA ME") ?? false
+    })
   }
 
   func testFetchCharacters_WithOffset_ShouldMakeDataTaskWithQueryForOffset() {
     let requestModel = FetchCharactersRequestModel(namePrefix: "DUMMY", limit: 10, offset: 30)
     sut.fetchCharacters(requestModel: requestModel, networkRequest: NetworkRequest())
-    mockURLSession.verifyDataTask(urlMatcher: { url in url?.hasQuery(name: "offset", value: "30") ?? false })
+    mockURLSession.verifyDataTask(urlMatcher: { url in
+      url?.hasQuery(name: "offset", value: "30") ?? false
+    })
   }
 
   func testFetchCharacters_WithPageSize_ShouldMakeDataTaskWithQueryForPageSize() {
     let requestModel = FetchCharactersRequestModel(namePrefix: "DUMMY", limit: 10, offset: 30)
     sut.fetchCharacters(requestModel: requestModel, networkRequest: NetworkRequest())
-    mockURLSession.verifyDataTask(urlMatcher: { url in url?.hasQuery(name: "limit", value: "10") ?? false })
+    mockURLSession.verifyDataTask(urlMatcher: { url in
+      url?.hasQuery(name: "limit", value: "10") ?? false
+    })
   }
 
   func testFetchCharacters_ShouldIncludeGeneratedAuthenticationParameters() {
-    let sutWithAuthParams = FetchCharactersMarvelService(session: mockURLSession, authParametersGenerator: { return "&FOO=BAR" })
-    sutWithAuthParams.fetchCharacters(requestModel: dummyRequestModel(), networkRequest: NetworkRequest())
-    mockURLSession.verifyDataTask(urlMatcher: { url in url?.hasQuery(name: "FOO", value: "BAR") ?? false })
+    let sutWithAuthParams =
+      FetchCharactersMarvelService(session: mockURLSession,
+                                   authParametersGenerator: { return "&FOO=BAR" })
+    sutWithAuthParams.fetchCharacters(requestModel: dummyRequestModel(),
+                                      networkRequest: NetworkRequest())
+    mockURLSession.verifyDataTask(urlMatcher: { url in
+      url?.hasQuery(name: "FOO", value: "BAR") ?? false
+    })
   }
 
   func testFetchCharacters_ShouldStartDataTask() {
     sut.fetchCharacters(requestModel: dummyRequestModel(), networkRequest: NetworkRequest())
     mockDataTask.verifyResume()
+  }
+
+  func testFetchCharacters_WithCompletionAndInvalidPrefix_ShouldReturnEmptyArray() {
+    let requestModel = FetchCharactersRequestModel(namePrefix: "XYZ", limit: 10, offset: 0)
+    sut.fetchCharacters(requestModel: requestModel, networkRequest: NetworkRequest()) {
+      responseModel in
+      switch responseModel {
+      case let .success(charactersSlice):
+        XCTAssertEqual(charactersSlice.characters.count, 0)
+      default:
+        XCTFail("Expected success, got \(responseModel)")
+      }
+    }
+  }
+
+  func testFetchCharacters_WithCompletionAndUniquePrefix_ShouldReturnOneElementOnly() {
+    let requestModel =
+      FetchCharactersRequestModel(namePrefix: "Spider-Man (House of M)", limit: 10, offset: 0)
+    sut.fetchCharacters(requestModel: requestModel, networkRequest: NetworkRequest()) {
+      responseModel in
+      switch responseModel {
+      case let .success(charactersSlice):
+        XCTAssertEqual(charactersSlice.characters.count, 1)
+      default:
+        XCTFail("Expected success, got \(responseModel)")
+      }
+    }
   }
 }
