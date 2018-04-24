@@ -16,27 +16,17 @@ struct FetchCharactersMarvelService {
     self.authParametersGenerator = authParametersGenerator
   }
 
-  func fetchCharacters(requestModel: FetchCharactersRequestModel, networkRequest: NetworkRequest) {
+  func fetchCharacters(requestModel: FetchCharactersRequestModel, networkRequest: NetworkRequest,
+                       completion: @escaping (FetchCharactersResponseModel) -> Void) {
     guard let url = makeURL(requestModel: requestModel) else { return }
     let dataTask = session.dataTask(with: url) { (data, response, error) in
-
-      print("error: \(String(describing:error))")
-      print("response: \(String(describing:response))")
-      print("data: \(String(describing:data))")
-
-      // TODO: pass data to FetchCharactersResponseBuilder
-      // Build FCResponseBuilder to get a CharactersSliceResponseModel
-      // Which will have an array of CharacterResponseModel
-
-      // Spike code
-      let json = try! JSONSerialization.jsonObject(with: data!, options: .allowFragments) as! [String: Any]
-      let fcResponseBuilder = FetchCharactersResponseBuilder(dictionary: json)
-      let fcResult = fcResponseBuilder.build()
-      switch fcResult {
-      case .success(let charactersSlice):
-        print(charactersSlice.characters)
-      case .failure(let failure):
-        print(failure)
+      if let error = error {
+        completion(.failure("FetchCharacters dataTask error: \(error.localizedDescription)"))
+      } else if let data = data {
+        let result = FetchCharactersParser.parse(jsonData: data)
+        completion(result)
+      } else {
+        completion(.failure("FetchCharacters unknown error."))
       }
     }
     networkRequest.start(dataTask)
