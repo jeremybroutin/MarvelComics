@@ -15,5 +15,7 @@ typealias FetchCharactersResponseModel = Result<CharactersSliceResponseModel>
  Instead we simply build an enum with associated values to understand the success
  or failure of the fetch request, and attach data to the success or error details
  to the failure.
+
+ It allows reusability by the use of generics.
  */
 

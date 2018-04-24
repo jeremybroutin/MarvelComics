@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		E30B0264208EB7CF0063272E /* URL+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E30B0263208EB7CF0063272E /* URL+Extensions.swift */; };
 		E30B0266208EB81D0063272E /* HasQueryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E30B0265208EB81D0063272E /* HasQueryTests.swift */; };
+		E30B0268208EBF730063272E /* ParseFetchCharacters.swift in Sources */ = {isa = PBXBuildFile; fileRef = E30B0267208EBF730063272E /* ParseFetchCharacters.swift */; };
+		E30B026A208EBFA30063272E /* ParseFetchCharactersTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E30B0269208EBFA30063272E /* ParseFetchCharactersTests.swift */; };
 		E33DDE912081631900555278 /* NetworkRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = E33DDE902081631900555278 /* NetworkRequest.swift */; };
 		E33DDE932081634600555278 /* NetworkRequestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E33DDE922081634600555278 /* NetworkRequestTests.swift */; };
 		E33DDE952085893300555278 /* Precondition.swift in Sources */ = {isa = PBXBuildFile; fileRef = E33DDE942085893300555278 /* Precondition.swift */; };
@@ -64,6 +66,8 @@
 /* Begin PBXFileReference section */
 		E30B0263208EB7CF0063272E /* URL+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URL+Extensions.swift"; sourceTree = "<group>"; };
 		E30B0265208EB81D0063272E /* HasQueryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HasQueryTests.swift; sourceTree = "<group>"; };
+		E30B0267208EBF730063272E /* ParseFetchCharacters.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParseFetchCharacters.swift; sourceTree = "<group>"; };
+		E30B0269208EBFA30063272E /* ParseFetchCharactersTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParseFetchCharactersTests.swift; sourceTree = "<group>"; };
 		E33DDE902081631900555278 /* NetworkRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkRequest.swift; sourceTree = "<group>"; };
 		E33DDE922081634600555278 /* NetworkRequestTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkRequestTests.swift; sourceTree = "<group>"; };
 		E33DDE942085893300555278 /* Precondition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Precondition.swift; sourceTree = "<group>"; };
@@ -229,6 +233,7 @@
 		E3FD02B5207BE7E60032A7D6 /* MarvelComicsTests */ = {
 			isa = PBXGroup;
 			children = (
+				E30B0269208EBFA30063272E /* ParseFetchCharactersTests.swift */,
 				E30B0265208EB81D0063272E /* HasQueryTests.swift */,
 				E33DDE922081634600555278 /* NetworkRequestTests.swift */,
 				E3FD0304207E7FF60032A7D6 /* CharactersSliceResponseBuilderTest.swift */,
@@ -262,6 +267,7 @@
 			isa = PBXGroup;
 			children = (
 				E3FD02DE207C4EDC0032A7D6 /* FetchCharactersMarvelService.swift */,
+				E30B0267208EBF730063272E /* ParseFetchCharacters.swift */,
 				E3FD0301207D7D690032A7D6 /* Builders */,
 				E3FD0302207D7D740032A7D6 /* Models */,
 			);
@@ -466,6 +472,7 @@
 				E33DDE912081631900555278 /* NetworkRequest.swift in Sources */,
 				E3FD02A7207BE7E50032A7D6 /* MarvelComics.xcdatamodeld in Sources */,
 				E3FD02D7207C21F80032A7D6 /* MarvelAuthentication.swift in Sources */,
+				E30B0268208EBF730063272E /* ParseFetchCharacters.swift in Sources */,
 				E3FD02FB207D77330032A7D6 /* CharactersSliceResponseModel.swift in Sources */,
 				E3FD02F9207D76BA0032A7D6 /* CharactersSliceResponseBuilder.swift in Sources */,
 				E3FD02FD207D77740032A7D6 /* CharacterResponseBuilder.swift in Sources */,
@@ -486,6 +493,7 @@
 				E3FD0305207E7FF60032A7D6 /* CharactersSliceResponseBuilderTest.swift in Sources */,
 				E33DDE932081634600555278 /* NetworkRequestTests.swift in Sources */,
 				E30B0266208EB81D0063272E /* HasQueryTests.swift in Sources */,
+				E30B026A208EBFA30063272E /* ParseFetchCharactersTests.swift in Sources */,
 				E3FD02F3207D6B6E0032A7D6 /* FetchCharactersResponseBuilderTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
