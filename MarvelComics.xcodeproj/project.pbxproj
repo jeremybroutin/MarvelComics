@@ -10,7 +10,7 @@
 		E30B0264208EB7CF0063272E /* URL+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E30B0263208EB7CF0063272E /* URL+Extensions.swift */; };
 		E30B0266208EB81D0063272E /* HasQueryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E30B0265208EB81D0063272E /* HasQueryTests.swift */; };
 		E30B0268208EBF730063272E /* ParseFetchCharacters.swift in Sources */ = {isa = PBXBuildFile; fileRef = E30B0267208EBF730063272E /* ParseFetchCharacters.swift */; };
-		E30B026A208EBFA30063272E /* ParseFetchCharactersTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E30B0269208EBFA30063272E /* ParseFetchCharactersTests.swift */; };
+		E30B026A208EBFA30063272E /* FetchCharactersParserTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E30B0269208EBFA30063272E /* FetchCharactersParserTests.swift */; };
 		E33DDE912081631900555278 /* NetworkRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = E33DDE902081631900555278 /* NetworkRequest.swift */; };
 		E33DDE932081634600555278 /* NetworkRequestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E33DDE922081634600555278 /* NetworkRequestTests.swift */; };
 		E33DDE952085893300555278 /* Precondition.swift in Sources */ = {isa = PBXBuildFile; fileRef = E33DDE942085893300555278 /* Precondition.swift */; };
@@ -67,7 +67,7 @@
 		E30B0263208EB7CF0063272E /* URL+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URL+Extensions.swift"; sourceTree = "<group>"; };
 		E30B0265208EB81D0063272E /* HasQueryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HasQueryTests.swift; sourceTree = "<group>"; };
 		E30B0267208EBF730063272E /* ParseFetchCharacters.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParseFetchCharacters.swift; sourceTree = "<group>"; };
-		E30B0269208EBFA30063272E /* ParseFetchCharactersTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParseFetchCharactersTests.swift; sourceTree = "<group>"; };
+		E30B0269208EBFA30063272E /* FetchCharactersParserTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchCharactersParserTests.swift; sourceTree = "<group>"; };
 		E33DDE902081631900555278 /* NetworkRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkRequest.swift; sourceTree = "<group>"; };
 		E33DDE922081634600555278 /* NetworkRequestTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkRequestTests.swift; sourceTree = "<group>"; };
 		E33DDE942085893300555278 /* Precondition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Precondition.swift; sourceTree = "<group>"; };
@@ -233,7 +233,7 @@
 		E3FD02B5207BE7E60032A7D6 /* MarvelComicsTests */ = {
 			isa = PBXGroup;
 			children = (
-				E30B0269208EBFA30063272E /* ParseFetchCharactersTests.swift */,
+				E30B0269208EBFA30063272E /* FetchCharactersParserTests.swift */,
 				E30B0265208EB81D0063272E /* HasQueryTests.swift */,
 				E33DDE922081634600555278 /* NetworkRequestTests.swift */,
 				E3FD0304207E7FF60032A7D6 /* CharactersSliceResponseBuilderTest.swift */,
@@ -493,7 +493,7 @@
 				E3FD0305207E7FF60032A7D6 /* CharactersSliceResponseBuilderTest.swift in Sources */,
 				E33DDE932081634600555278 /* NetworkRequestTests.swift in Sources */,
 				E30B0266208EB81D0063272E /* HasQueryTests.swift in Sources */,
-				E30B026A208EBFA30063272E /* ParseFetchCharactersTests.swift in Sources */,
+				E30B026A208EBFA30063272E /* FetchCharactersParserTests.swift in Sources */,
 				E3FD02F3207D6B6E0032A7D6 /* FetchCharactersResponseBuilderTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -1,10 +1,10 @@
 import Foundation
 
-struct ParseFetchCharacters {
+struct FetchCharactersParser {
 
-  private let badJSON = "Bad JSON"
+  private static let badJSON = "Bad JSON"
 
-  func parseFetchCharacters(jsonData: Data) -> FetchCharactersResponseModel {
+  static func parse(jsonData: Data) -> FetchCharactersResponseModel {
     let object = try? JSONSerialization.jsonObject(with: jsonData, options: .allowFragments)
     guard let dict = object as? [String: Any],
       let code = dict["code"] as? Int else {

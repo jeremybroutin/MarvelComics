@@ -1,17 +1,7 @@
 import XCTest
 @testable import MarvelComics
 
-class ParseFetchCharactersTests: XCTestCase {
-
-  var sut: ParseFetchCharacters!
-
-  override func setUp() {
-    sut = ParseFetchCharacters()
-  }
-
-  override func tearDown() {
-    sut = nil
-  }
+class FetchCharactersParserTests: XCTestCase {
 
   private func jsonData(_ json: String) -> Data {
     return json.data(using: .utf8, allowLossyConversion: false)!
@@ -22,7 +12,7 @@ class ParseFetchCharactersTests: XCTestCase {
                "\"code\":409," +
                "\"status\":\"STATUS\"" +
                "}"
-    let response = sut.parseFetchCharacters(jsonData: jsonData(json))
+    let response = FetchCharactersParser.parse(jsonData: jsonData(json))
 
     switch response {
     case let .failure(status):
@@ -34,7 +24,7 @@ class ParseFetchCharactersTests: XCTestCase {
 
   func testParse_WithMalformedJSON_ShouldReturnBadJSONFailure() {
     let json = "{" + "\"cod"
-    let response = sut.parseFetchCharacters(jsonData: jsonData(json))
+    let response = FetchCharactersParser.parse(jsonData: jsonData(json))
     switch response {
     case let .failure(status):
       XCTAssertEqual(status, "Bad JSON")
@@ -45,7 +35,7 @@ class ParseFetchCharactersTests: XCTestCase {
 
   func testParse_WithJSONArrayInsteadOfDictionary_ShouldReturnBadJSONFailure() {
     let json = "[]"
-    let response = sut.parseFetchCharacters(jsonData: jsonData(json))
+    let response = FetchCharactersParser.parse(jsonData: jsonData(json))
     switch response {
     case let .failure(status):
       XCTAssertEqual(status, "Bad JSON")
@@ -59,7 +49,7 @@ class ParseFetchCharactersTests: XCTestCase {
                "\"code\":\"409\"," +
                "\"status\":\"STATUS\"" +
                "}"
-    let response = sut.parseFetchCharacters(jsonData: jsonData(json))
+    let response = FetchCharactersParser.parse(jsonData: jsonData(json))
 
     switch response {
     case let .failure(status):
@@ -73,7 +63,7 @@ class ParseFetchCharactersTests: XCTestCase {
     let json = "{" +
                "\"code\":409," +
                "}"
-    let response = sut.parseFetchCharacters(jsonData: jsonData(json))
+    let response = FetchCharactersParser.parse(jsonData: jsonData(json))
 
     switch response {
     case let .failure(status):
@@ -91,7 +81,7 @@ class ParseFetchCharactersTests: XCTestCase {
                "\"total\":456" +
                "}" +
                "}"
-    let response = sut.parseFetchCharacters(jsonData: jsonData(json))
+    let response = FetchCharactersParser.parse(jsonData: jsonData(json))
     switch response {
     case let .success(responseModel):
       XCTAssertEqual(responseModel.offset, 123)
@@ -108,7 +98,7 @@ class ParseFetchCharactersTests: XCTestCase {
                "\"offset\":123," +
                "}" +
                "}"
-    let response = sut.parseFetchCharacters(jsonData: jsonData(json))
+    let response = FetchCharactersParser.parse(jsonData: jsonData(json))
     switch response {
     case let .failure(status):
       XCTAssertEqual(status, "Invalid data")
