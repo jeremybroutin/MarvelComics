@@ -17,16 +17,16 @@ struct FetchCharactersMarvelService {
   }
 
   func fetchCharacters(requestModel: FetchCharactersRequestModel, networkRequest: NetworkRequest,
-                       completion: @escaping (FetchCharactersResponseModel) -> Void) {
+                       completion: ((FetchCharactersResponseModel) -> Void)? = nil) {
     guard let url = makeURL(requestModel: requestModel) else { return }
     let dataTask = session.dataTask(with: url) { (data, response, error) in
       if let error = error {
-        completion(.failure("FetchCharacters dataTask error: \(error.localizedDescription)"))
+        completion?(.failure("FetchCharacters dataTask error: \(error.localizedDescription)"))
       } else if let data = data {
         let result = FetchCharactersParser.parse(jsonData: data)
-        completion(result)
+        completion?(result)
       } else {
-        completion(.failure("FetchCharacters unknown error."))
+        completion?(.failure("FetchCharacters unknown error."))
       }
     }
     networkRequest.start(dataTask)
