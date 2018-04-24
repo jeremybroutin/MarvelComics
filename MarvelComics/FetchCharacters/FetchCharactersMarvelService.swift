@@ -50,7 +50,7 @@ struct FetchCharactersMarvelService {
     }
     return URL(string: "https://gateway.marvel.com/v1/public/characters" +
       "?nameStartsWith=\(namePrefix)" +
-      "&limit=\(requestModel.pageSize)" +
+      "&limit=\(requestModel.limit)" +
       "&offset=\(requestModel.offset)" +
       authParametersGenerator())
   }

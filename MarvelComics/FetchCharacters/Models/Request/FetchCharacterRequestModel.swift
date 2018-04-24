@@ -1,5 +1,5 @@
 struct FetchCharactersRequestModel {
   let namePrefix: String
-  let pageSize: Int
+  let limit: Int
   let offset: Int
 }
